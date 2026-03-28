@@ -1,4 +1,15 @@
 /* ===========================
+   Font Face
+   =========================== */
+@font-face {
+  font-family: 'Manteiga Gorda';
+  src: url('../manteiga-gorda.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===========================
    CSS Variables & Reset
    =========================== */
 :root {
@@ -17,7 +28,7 @@
   --color-violeta: #9051c3;
   --color-lavanda: #b198d8;
 
-  --font-heading: 'Fredoka One', cursive;
+  --font-heading: 'Manteiga Gorda', 'Fredoka One', cursive;
   --font-body: 'Nunito', sans-serif;
 
   --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
