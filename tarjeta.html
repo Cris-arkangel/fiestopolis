@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tarjeta Fiestopolis</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 15mm;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Calibri', 'Candara', sans-serif;
+      background: #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px;
+      gap: 30px;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .label {
+      font-size: 13px;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+
+    /* ===== CARD BASE ===== */
+    .card {
+      width: 90mm;
+      height: 50mm;
+      border-radius: 3mm;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    /* ===== FRONT ===== */
+    .card-front {
+      background: #1c1e24 url('ball.png') no-repeat center center;
+      background-size: cover;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 3mm 8mm;
+    }
+
+    /* Bottom gradient overlay for text legibility */
+    .card-front::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 14mm;
+      background: linear-gradient(to top, rgba(15, 15, 25, 0.92) 0%, rgba(15, 15, 25, 0.5) 55%, transparent 100%);
+    }
+
+    .front-content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .front-tagline {
+      font-size: 7.5px;
+      color: #c8daf0;
+      letter-spacing: 2px;
+      margin-bottom: 1.5mm;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+    }
+
+    /* Subtle gradient line */
+    .front-line {
+      width: 30mm;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #7baaf5, #a07cd8, transparent);
+      margin-bottom: 1.5mm;
+    }
+
+    /* ===== BACK ===== */
+    .card-back {
+      background: #fff;
+      display: flex;
+      padding: 4mm;
+      gap: 3mm;
+    }
+
+    .back-left {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1mm 2mm;
+    }
+
+    .back-services-title {
+      font-size: 7px;
+      color: #9b7bcc;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      margin-bottom: 1.5mm;
+    }
+
+    .back-services {
+      font-size: 7.5px;
+      color: #444;
+      line-height: 1.4;
+    }
+
+    .back-services > span {
+      display: block;
+    }
+
+    .service-dot {
+      color: #7baaf5;
+      font-weight: 700;
+      font-size: 6px;
+      vertical-align: middle;
+    }
+
+    .back-contact {
+      margin-top: auto;
+      padding-top: 2mm;
+      border-top: 0.5px solid #e8e0f0;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 1.5mm;
+      margin-bottom: 0.5mm;
+      font-size: 7.5px;
+      color: #333;
+    }
+
+    .contact-icon {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #7baaf5, #9b7bcc);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 7px;
+      flex-shrink: 0;
+    }
+
+    .contact-label {
+      font-weight: 700;
+      color: #1a1a2e;
+    }
+
+    .back-right {
+      width: 22mm;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5mm;
+    }
+
+    .qr-container {
+      width: 20mm;
+      height: 20mm;
+      border-radius: 1.5mm;
+      overflow: hidden;
+      border: 0.5px solid #e0e0e0;
+    }
+
+    .qr-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .qr-label {
+      font-size: 6px;
+      color: #9b7bcc;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      text-align: center;
+    }
+
+    .back-brand {
+      position: absolute;
+      bottom: 1.5mm;
+      right: 3mm;
+      font-size: 5px;
+      color: #ccc;
+      letter-spacing: 0.5px;
+    }
+
+    /* Left accent bar */
+    .back-accent {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1.2mm;
+      height: 100%;
+      background: linear-gradient(180deg, #7baaf5, #9b7bcc, #7baaf5);
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        padding: 10mm;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="label">Frente</div>
+
+  <!-- ===== FRENTE ===== -->
+  <div class="card card-front">
+    <div class="front-content">
+      <div class="front-line"></div>
+      <div class="front-tagline">Eventos &bull; Shows &bull; Talleres &bull; Cumplea&ntilde;os</div>
+    </div>
+  </div>
+
+  <div class="label">Dorso</div>
+
+  <!-- ===== DORSO ===== -->
+  <div class="card card-back" style="position: relative;">
+    <div class="back-accent"></div>
+
+    <div class="back-left">
+      <div>
+        <div class="back-services-title">Nuestros servicios</div>
+        <div class="back-services">
+          <span><span class="service-dot">&#9670;</span> Shows de Robots LED</span>
+          <span><span class="service-dot">&#9670;</span> Personajes Inflables Gigantes</span>
+          <span><span class="service-dot">&#9670;</span> Talleres de Arte y Slime</span>
+          <span><span class="service-dot">&#9670;</span> Spa para Nenas &bull; Pijamadas</span>
+          <span><span class="service-dot">&#9670;</span> Algod&oacute;n de Az&uacute;car &bull; Pochoclos</span>
+          <span><span class="service-dot">&#9670;</span> L&aacute;mparas de Celof&aacute;n</span>
+        </div>
+      </div>
+
+      <div class="back-contact">
+        <div class="contact-row">
+          <div class="contact-icon">&#9742;</div>
+          <span><span class="contact-label">WhatsApp:</span> 11-2593-2143</span>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">&#9741;</div>
+          <span><span class="contact-label">Instagram:</span> @Fiestopolis.animaciones</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="back-right">
+      <div class="qr-container">
+        <img src="qr.png" alt="QR Instagram">
+      </div>
+      <div class="qr-label">Seguinos en<br>Instagram</div>
+    </div>
+  </div>
+
+</body>
+</html>

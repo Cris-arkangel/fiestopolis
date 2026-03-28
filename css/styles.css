@@ -2,17 +2,20 @@
    CSS Variables & Reset
    =========================== */
 :root {
-  --color-pink: #ff6b9d;
-  --color-purple: #c44dff;
-  --color-blue: #4dabf7;
-  --color-yellow: #ffd43b;
-  --color-orange: #ff922b;
-  --color-green: #51cf66;
+  --color-pink: #b198d8;
+  --color-purple: #7040b2;
+  --color-blue: #7fd5fa;
+  --color-yellow: #bae8fb;
+  --color-orange: #83a6e7;
+  --color-green: #8b8bda;
   --color-dark: #2b2d42;
-  --color-light: #f8f9fa;
+  --color-light: #f9f9fd;
   --color-white: #ffffff;
   --color-gray: #868e96;
   --color-gray-light: #e9ecef;
+  --color-celeste: #7fd5fa;
+  --color-violeta: #9051c3;
+  --color-lavanda: #b198d8;
 
   --font-heading: 'Fredoka One', cursive;
   --font-body: 'Nunito', sans-serif;
@@ -20,7 +23,7 @@
   --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
   --shadow-md: 0 4px 20px rgba(0,0,0,0.1);
   --shadow-lg: 0 8px 40px rgba(0,0,0,0.12);
-  --shadow-color: 0 4px 20px rgba(196, 77, 255, 0.2);
+  --shadow-color: 0 4px 20px rgba(112, 64, 178, 0.2);
 
   --radius-sm: 8px;
   --radius-md: 16px;
