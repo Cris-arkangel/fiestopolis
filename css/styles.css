@@ -282,7 +282,7 @@ ul {
   align-items: center;
   position: relative;
   padding-top: 72px;
-  background: linear-gradient(170deg, #fff8fc 0%, #f3e8ff 40%, #e8f4ff 100%);
+  background: linear-gradient(170deg, #e8f4ff 0%, #e8e0f8 40%, #daf0ff 100%);
   overflow: hidden;
 }
 
