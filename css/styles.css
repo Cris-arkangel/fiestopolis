@@ -277,7 +277,7 @@ ul {
    Hero
    =========================== */
 .hero {
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
   align-items: center;
   position: relative;
@@ -343,7 +343,7 @@ ul {
   position: relative;
   z-index: 1;
   text-align: center;
-  padding: 40px 0;
+  padding: 20px 0 40px;
 }
 
 .hero__title {
@@ -996,6 +996,11 @@ ul {
 
   .hero__stats {
     gap: 24px;
+  }
+
+  .hero__content img {
+    width: 280px !important;
+    margin-bottom: 10px !important;
   }
 
   .servicios__grid {
