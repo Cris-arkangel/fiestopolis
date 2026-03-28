@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiestopolis - Animacion Infantil y Talleres de Arte</title>
+  <meta name="description" content="Fiestopolis: servicio de animacion infantil y talleres de arte para ninos. Fiestas inolvidables llenas de creatividad y diversion.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#" class="nav__logo">
+        <span class="logo-icon">🎉</span> Fiestopolis
+      </a>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="#hero" class="nav__link">Inicio</a></li>
+        <li><a href="#servicios" class="nav__link">Servicios</a></li>
+        <li><a href="#galeria" class="nav__link">Galeria</a></li>
+        <li><a href="#testimonios" class="nav__link">Testimonios</a></li>
+        <li><a href="#nosotros" class="nav__link">Nosotros</a></li>
+        <li><a href="#contacto" class="nav__link nav__link--cta">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero__bg-shapes">
+      <div class="shape shape--1"></div>
+      <div class="shape shape--2"></div>
+      <div class="shape shape--3"></div>
+      <div class="shape shape--4"></div>
+    </div>
+    <div class="container hero__content">
+      <h1 class="hero__title animate-on-scroll">
+        <span class="hero__title--highlight">Fiestas magicas</span><br>
+        para los mas pequenos
+      </h1>
+      <p class="hero__subtitle animate-on-scroll">
+        Animacion infantil y talleres de arte que transforman cada celebracion en una aventura inolvidable llena de risas, creatividad y diversion.
+      </p>
+      <div class="hero__actions animate-on-scroll">
+        <a href="#contacto" class="btn btn--primary btn--lg">🎈 Reserva tu fiesta!</a>
+        <a href="#servicios" class="btn btn--outline btn--lg">Conoce mas</a>
+      </div>
+      <div class="hero__stats animate-on-scroll">
+        <div class="stat">
+          <span class="stat__number">500+</span>
+          <span class="stat__label">Fiestas realizadas</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number">10k+</span>
+          <span class="stat__label">Ninos felices</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number">50+</span>
+          <span class="stat__label">Talleres creativos</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section class="servicios section" id="servicios">
+    <div class="container">
+      <h2 class="section__title animate-on-scroll">Nuestros Servicios</h2>
+      <p class="section__subtitle animate-on-scroll">Todo lo que necesitas para una celebracion perfecta</p>
+      <div class="servicios__grid">
+        <!-- Animacion de fiestas -->
+        <div class="card animate-on-scroll">
+          <div class="card__icon">🎪</div>
+          <h3 class="card__title">Animacion de Fiestas Infantiles</h3>
+          <p class="card__text">
+            Nuestros animadores profesionales llenan cada fiesta de energia, juegos interactivos, musica y mucha diversion. Desde payasos y magos hasta personajes tematicos.
+          </p>
+          <ul class="card__list">
+            <li>Juegos y dinamicas grupales</li>
+            <li>Shows de magia y titeres</li>
+            <li>Personajes tematicos</li>
+            <li>Musica y baile</li>
+          </ul>
+          <a href="#contacto" class="btn btn--secondary">Solicitar info</a>
+        </div>
+        <!-- Talleres de arte -->
+        <div class="card animate-on-scroll">
+          <div class="card__icon">🎨</div>
+          <h3 class="card__title">Talleres de Arte para Ninos</h3>
+          <p class="card__text">
+            Talleres creativos donde los ninos exploran su lado artistico a traves de pintura, manualidades, escultura y mas. Ideal para fiestas o eventos especiales.
+          </p>
+          <ul class="card__list">
+            <li>Pintura y dibujo</li>
+            <li>Manualidades creativas</li>
+            <li>Escultura con arcilla</li>
+            <li>Arte con materiales reciclados</li>
+          </ul>
+          <a href="#contacto" class="btn btn--secondary">Solicitar info</a>
+        </div>
+        <!-- Fiestas tematicas -->
+        <div class="card animate-on-scroll">
+          <div class="card__icon">🏰</div>
+          <h3 class="card__title">Fiestas Tematicas</h3>
+          <p class="card__text">
+            Creamos mundos fantasticos con decoracion, vestuario y actividades personalizadas segun la tematica favorita de tu hijo o hija.
+          </p>
+          <ul class="card__list">
+            <li>Decoracion completa</li>
+            <li>Vestuario tematico</li>
+            <li>Actividades personalizadas</li>
+            <li>Recuerdos para invitados</li>
+          </ul>
+          <a href="#contacto" class="btn btn--secondary">Solicitar info</a>
+        </div>
+        <!-- Eventos especiales -->
+        <div class="card animate-on-scroll">
+          <div class="card__icon">🌟</div>
+          <h3 class="card__title">Eventos Especiales</h3>
+          <p class="card__text">
+            Organizamos eventos corporativos infantiles, dias de familia, festivales escolares y cualquier ocasion especial que necesites celebrar.
+          </p>
+          <ul class="card__list">
+            <li>Eventos corporativos</li>
+            <li>Festivales escolares</li>
+            <li>Dias de familia</li>
+            <li>Celebraciones comunitarias</li>
+          </ul>
+          <a href="#contacto" class="btn btn--secondary">Solicitar info</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galeria -->
+  <section class="galeria section" id="galeria">
+    <div class="container">
+      <h2 class="section__title animate-on-scroll">Galeria de Momentos</h2>
+      <p class="section__subtitle animate-on-scroll">Cada fiesta es una historia unica llena de sonrisas</p>
+      <div class="galeria__grid">
+        <div class="galeria__item animate-on-scroll" style="--delay: 0">
+          <div class="galeria__placeholder" style="background: linear-gradient(135deg, var(--color-pink), var(--color-purple));">
+            <span>🎂</span>
+            <p>Fiesta de cumpleanos</p>
+          </div>
+        </div>
+        <div class="galeria__item animate-on-scroll" style="--delay: 1">
+          <div class="galeria__placeholder" style="background: linear-gradient(135deg, var(--color-yellow), var(--color-orange));">
+            <span>🎨</span>
+            <p>Taller de pintura</p>
+          </div>
+        </div>
+        <div class="galeria__item animate-on-scroll" style="--delay: 2">
+          <div class="galeria__placeholder" style="background: linear-gradient(135deg, var(--color-blue), var(--color-purple));">
+            <span>🎭</span>
+            <p>Show de titeres</p>
+          </div>
+        </div>
+        <div class="galeria__item animate-on-scroll" style="--delay: 3">
+          <div class="galeria__placeholder" style="background: linear-gradient(135deg, var(--color-green), var(--color-blue));">
+            <span>🧩</span>
+            <p>Juegos grupales</p>
+          </div>
+        </div>
+        <div class="galeria__item animate-on-scroll" style="--delay: 4">
+          <div class="galeria__placeholder" style="background: linear-gradient(135deg, var(--color-orange), var(--color-pink));">
+            <span>🎪</span>
+            <p>Animacion en vivo</p>
+          </div>
+        </div>
+        <div class="galeria__item animate-on-scroll" style="--delay: 5">
+          <div class="galeria__placeholder" style="background: linear-gradient(135deg, var(--color-purple), var(--color-pink));">
+            <span>✨</span>
+            <p>Manualidades creativas</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonios -->
+  <section class="testimonios section" id="testimonios">
+    <div class="container">
+      <h2 class="section__title animate-on-scroll">Lo que dicen nuestras familias</h2>
+      <p class="section__subtitle animate-on-scroll">Miles de familias confian en nosotros</p>
+      <div class="testimonios__grid">
+        <div class="testimonio animate-on-scroll">
+          <div class="testimonio__stars">★★★★★</div>
+          <p class="testimonio__text">
+            "Contratamos a Fiestopolis para el cumpleanos de mi hija y fue absolutamente magico. Los ninos no pararon de reir y jugar. Sin duda repetiremos!"
+          </p>
+          <div class="testimonio__author">
+            <div class="testimonio__avatar">ML</div>
+            <div>
+              <strong>Maria Lopez</strong>
+              <span>Mama de Valentina, 6 anos</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonio animate-on-scroll">
+          <div class="testimonio__stars">★★★★★</div>
+          <p class="testimonio__text">
+            "El taller de arte fue increible. Mi hijo descubrio su pasion por la pintura ese dia. El equipo es muy profesional y carinoso con los ninos."
+          </p>
+          <div class="testimonio__author">
+            <div class="testimonio__avatar">CG</div>
+            <div>
+              <strong>Carlos Garcia</strong>
+              <span>Papa de Santiago, 8 anos</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonio animate-on-scroll">
+          <div class="testimonio__stars">★★★★★</div>
+          <p class="testimonio__text">
+            "Organizaron una fiesta tematica de piratas para mis gemelos y cada detalle fue perfecto. La decoracion, los juegos, todo estuvo espectacular."
+          </p>
+          <div class="testimonio__author">
+            <div class="testimonio__avatar">AR</div>
+            <div>
+              <strong>Ana Rodriguez</strong>
+              <span>Mama de Diego y Daniel, 5 anos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre Nosotros -->
+  <section class="nosotros section" id="nosotros">
+    <div class="container">
+      <div class="nosotros__content">
+        <div class="nosotros__text animate-on-scroll">
+          <h2 class="section__title section__title--left">Sobre Fiestopolis</h2>
+          <p>
+            Somos un equipo apasionado de animadores, artistas y educadores dedicados a crear experiencias inolvidables para los mas pequenos. Con mas de 8 anos de experiencia, hemos llevado alegria a miles de familias.
+          </p>
+          <p>
+            Nuestra mision es transformar cada celebracion en un momento magico donde los ninos puedan ser ellos mismos, explorar su creatividad y crear recuerdos que duren toda la vida.
+          </p>
+          <div class="nosotros__values">
+            <div class="value">
+              <span class="value__icon">💛</span>
+              <h4>Pasion</h4>
+              <p>Amamos lo que hacemos y se nota en cada evento</p>
+            </div>
+            <div class="value">
+              <span class="value__icon">🎯</span>
+              <h4>Profesionalismo</h4>
+              <p>Cada detalle esta cuidadosamente planificado</p>
+            </div>
+            <div class="value">
+              <span class="value__icon">🌈</span>
+              <h4>Creatividad</h4>
+              <p>Siempre innovamos con nuevas ideas y actividades</p>
+            </div>
+          </div>
+        </div>
+        <div class="nosotros__visual animate-on-scroll">
+          <div class="nosotros__image-placeholder">
+            <div class="nosotros__emoji-collage">
+              <span style="--i:0">🎈</span>
+              <span style="--i:1">🎨</span>
+              <span style="--i:2">🎪</span>
+              <span style="--i:3">🎭</span>
+              <span style="--i:4">🌟</span>
+              <span style="--i:5">🎉</span>
+              <span style="--i:6">🧸</span>
+              <span style="--i:7">🎶</span>
+              <span style="--i:8">🦄</span>
+            </div>
+            <p class="nosotros__team-text">Nuestro equipo de 15+ profesionales</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section class="contacto section" id="contacto">
+    <div class="container">
+      <h2 class="section__title animate-on-scroll">Reserva tu fiesta!</h2>
+      <p class="section__subtitle animate-on-scroll">Cuentanos que tienes en mente y te ayudamos a hacerlo realidad</p>
+      <div class="contacto__content">
+        <form class="contacto__form animate-on-scroll" id="contact-form" novalidate>
+          <div class="form__group">
+            <label for="nombre" class="form__label">Nombre completo *</label>
+            <input type="text" id="nombre" name="nombre" class="form__input" placeholder="Tu nombre" required>
+            <span class="form__error" id="nombre-error"></span>
+          </div>
+          <div class="form__group">
+            <label for="email" class="form__label">Correo electronico *</label>
+            <input type="email" id="email" name="email" class="form__input" placeholder="tu@email.com" required>
+            <span class="form__error" id="email-error"></span>
+          </div>
+          <div class="form__group">
+            <label for="telefono" class="form__label">Telefono *</label>
+            <input type="tel" id="telefono" name="telefono" class="form__input" placeholder="+34 600 000 000" required>
+            <span class="form__error" id="telefono-error"></span>
+          </div>
+          <div class="form__group">
+            <label for="servicio" class="form__label">Servicio de interes</label>
+            <select id="servicio" name="servicio" class="form__input form__select">
+              <option value="">Selecciona un servicio</option>
+              <option value="animacion">Animacion de fiestas</option>
+              <option value="talleres">Talleres de arte</option>
+              <option value="tematicas">Fiestas tematicas</option>
+              <option value="eventos">Eventos especiales</option>
+            </select>
+          </div>
+          <div class="form__group form__group--full">
+            <label for="mensaje" class="form__label">Mensaje *</label>
+            <textarea id="mensaje" name="mensaje" class="form__input form__textarea" placeholder="Cuentanos sobre tu evento: fecha, numero de ninos, tematica..." rows="4" required></textarea>
+            <span class="form__error" id="mensaje-error"></span>
+          </div>
+          <button type="submit" class="btn btn--primary btn--lg form__submit">
+            🎉 Enviar solicitud
+          </button>
+          <div class="form__success" id="form-success">
+            ✅ Mensaje enviado correctamente! Te contactaremos pronto.
+          </div>
+        </form>
+        <div class="contacto__info animate-on-scroll">
+          <div class="info__card">
+            <span class="info__icon">📍</span>
+            <h4>Ubicacion</h4>
+            <p>Calle de la Alegria 42<br>Madrid, Espana</p>
+          </div>
+          <div class="info__card">
+            <span class="info__icon">📞</span>
+            <h4>Telefono</h4>
+            <p>+34 912 345 678<br>+34 600 123 456</p>
+          </div>
+          <div class="info__card">
+            <span class="info__icon">✉️</span>
+            <h4>Email</h4>
+            <p>hola@fiestopolis.es<br>reservas@fiestopolis.es</p>
+          </div>
+          <div class="info__card">
+            <span class="info__icon">🕐</span>
+            <h4>Horario</h4>
+            <p>Lunes a Viernes: 9:00 - 19:00<br>Sabados: 10:00 - 14:00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__brand">
+          <a href="#" class="footer__logo">🎉 Fiestopolis</a>
+          <p class="footer__description">
+            Creando momentos magicos e inolvidables para los mas pequenos desde 2017.
+          </p>
+          <div class="footer__social">
+            <a href="#" class="social__link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="#" class="social__link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="#" class="social__link" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+            </a>
+            <a href="#" class="social__link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__links">
+          <h4>Enlaces rapidos</h4>
+          <ul>
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#testimonios">Testimonios</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="#servicios">Animacion infantil</a></li>
+            <li><a href="#servicios">Talleres de arte</a></li>
+            <li><a href="#servicios">Fiestas tematicas</a></li>
+            <li><a href="#servicios">Eventos especiales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 Fiestopolis. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

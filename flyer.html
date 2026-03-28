@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Flyer Fiestopolis</title>
+  <style>
+    @page {
+      size: 148mm 210mm;
+      margin: 0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Calibri', 'Candara', 'Segoe UI', sans-serif;
+      background: #e0e0e0;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .flyer {
+      width: 148mm;
+      height: 210mm;
+      background: #fff;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    /* ===== HEADER - Dark area with logo ===== */
+    .header {
+      width: 100%;
+      height: 95mm;
+      background: url('ball.png') no-repeat center center;
+      background-size: cover;
+      position: relative;
+    }
+
+    /* Gradient overlay at bottom of header for smooth transition */
+    .header::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 30mm;
+      background: linear-gradient(to top, #1a1a2e 0%, rgba(26, 26, 46, 0.7) 40%, transparent 100%);
+    }
+
+    /* Tagline over the gradient */
+    .header-tagline {
+      position: absolute;
+      bottom: 4mm;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .header-tagline .line {
+      display: block;
+      width: 50mm;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #7baaf5, #a07cd8, transparent);
+      margin: 0 auto 2mm;
+    }
+
+    .header-tagline span {
+      font-size: 10px;
+      color: #c8daf0;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+    }
+
+    /* ===== TRANSITION BAND ===== */
+    .band {
+      width: 100%;
+      height: 8mm;
+      background: linear-gradient(135deg, #7baaf5 0%, #9b7bcc 50%, #c06bb3 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8mm;
+    }
+
+    .band-star {
+      color: rgba(255,255,255,0.8);
+      font-size: 13px;
+    }
+
+    .band-text {
+      font-size: 14px;
+      color: #fff;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    /* ===== SERVICES SECTION ===== */
+    .services {
+      padding: 6mm 10mm 4mm;
+    }
+
+    .services-title {
+      font-size: 18px;
+      color: #1a1a2e;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 6mm;
+    }
+
+    .services-title::after {
+      content: '';
+      display: block;
+      width: 25mm;
+      height: 2px;
+      background: linear-gradient(90deg, #7baaf5, #9b7bcc);
+      margin: 3mm auto 0;
+      border-radius: 1px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5mm 7mm;
+    }
+
+    .service-item {
+      display: flex;
+      align-items: center;
+      gap: 3mm;
+    }
+
+    .service-icon {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #7baaf5, #9b7bcc);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      flex-shrink: 0;
+    }
+
+    .service-text {
+      font-size: 15px;
+      color: #333;
+      line-height: 1.4;
+    }
+
+    /* ===== CONTACT FOOTER ===== */
+    .footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 42mm;
+      background: #1a1a2e;
+      display: flex;
+      padding: 4mm 6mm;
+      gap: 4mm;
+    }
+
+    /* Decorative top edge */
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #7baaf5, #9b7bcc, #c06bb3, #9b7bcc, #7baaf5);
+    }
+
+    .footer-left {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 3mm;
+    }
+
+    .footer-title {
+      font-size: 13px;
+      color: #9b7bcc;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 700;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 2.5mm;
+    }
+
+    .contact-icon {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #7baaf5, #9b7bcc);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      flex-shrink: 0;
+    }
+
+    .contact-info {
+      font-size: 14px;
+      color: #e0e0e0;
+    }
+
+    .contact-info strong {
+      color: #fff;
+    }
+
+    .footer-right {
+      width: 32mm;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2mm;
+    }
+
+    .qr-box {
+      width: 28mm;
+      height: 28mm;
+      background: #fff;
+      border-radius: 2mm;
+      padding: 1.5mm;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .qr-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .qr-text {
+      font-size: 8px;
+      color: #b0c8e8;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
+    /* ===== DECORATIVE ELEMENTS ===== */
+    .sparkle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: rgba(180, 210, 255, 0.5);
+      border-radius: 50%;
+      z-index: 2;
+    }
+    .sp1 { top: 12mm; left: 8mm; }
+    .sp2 { top: 8mm; right: 12mm; width: 3px; height: 3px; background: rgba(160, 140, 220, 0.4); }
+    .sp3 { top: 25mm; left: 18mm; width: 2px; height: 2px; }
+    .sp4 { top: 20mm; right: 6mm; width: 3px; height: 3px; background: rgba(160, 140, 220, 0.4); }
+
+    @media print {
+      body {
+        background: none;
+        padding: 0;
+      }
+      .flyer {
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="flyer">
+    <!-- Decorative sparkles -->
+    <div class="sparkle sp1"></div>
+    <div class="sparkle sp2"></div>
+    <div class="sparkle sp3"></div>
+    <div class="sparkle sp4"></div>
+
+    <!-- HEADER with logo -->
+    <div class="header">
+      <div class="header-tagline">
+        <div class="line"></div>
+        <span>Eventos &bull; Shows &bull; Talleres &bull; Cumplea&ntilde;os</span>
+      </div>
+    </div>
+
+    <!-- Color band -->
+    <div class="band">
+      <span class="band-star">&#10022;</span>
+      <span class="band-text">Tu fiesta so&ntilde;ada</span>
+      <span class="band-star">&#10022;</span>
+    </div>
+
+    <!-- Services -->
+    <div class="services">
+      <div class="services-title">Nuestros Servicios</div>
+      <div class="services-grid">
+        <div class="service-item">
+          <div class="service-icon">&#9733;</div>
+          <span class="service-text">Shows de Robots LED</span>
+        </div>
+        <div class="service-item">
+          <div class="service-icon">&#9733;</div>
+          <span class="service-text">Personajes Inflables Gigantes</span>
+        </div>
+        <div class="service-item">
+          <div class="service-icon">&#9733;</div>
+          <span class="service-text">Talleres de Arte y Slime</span>
+        </div>
+        <div class="service-item">
+          <div class="service-icon">&#9733;</div>
+          <span class="service-text">Spa para Nenas &bull; Pijamadas</span>
+        </div>
+        <div class="service-item">
+          <div class="service-icon">&#9733;</div>
+          <span class="service-text">Algod&oacute;n de Az&uacute;car &bull; Pochoclos</span>
+        </div>
+        <div class="service-item">
+          <div class="service-icon">&#9733;</div>
+          <span class="service-text">L&aacute;mparas de Celof&aacute;n</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer with contact -->
+    <div class="footer">
+      <div class="footer-left">
+        <div class="footer-title">Contact&aacute;nos</div>
+        <div class="contact-row">
+          <div class="contact-icon">&#9742;</div>
+          <span class="contact-info"><strong>WhatsApp:</strong> 11-2593-2143</span>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">&#9741;</div>
+          <span class="contact-info"><strong>Instagram:</strong> @Fiestopolis.animaciones</span>
+        </div>
+      </div>
+      <div class="footer-right">
+        <div class="qr-box">
+          <img src="qr.png" alt="QR Instagram">
+        </div>
+        <div class="qr-text">Escane&aacute; y<br>seguinos</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
