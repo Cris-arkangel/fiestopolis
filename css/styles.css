@@ -343,7 +343,18 @@ ul {
   position: relative;
   z-index: 1;
   text-align: center;
-  padding: 20px 0 40px;
+  padding: 0 0 40px;
+}
+
+.hero__logo {
+  width: 600px;
+  max-width: 90%;
+  margin: 0 auto -10px;
+  display: block;
+  filter: drop-shadow(0 5px 25px rgba(127, 213, 250, 0.4));
+  clip-path: inset(15% 0 18% 0);
+  margin-top: -40px;
+  margin-bottom: -80px;
 }
 
 .hero__title {
@@ -998,9 +1009,10 @@ ul {
     gap: 24px;
   }
 
-  .hero__content img {
-    width: 280px !important;
-    margin-bottom: 10px !important;
+  .hero__logo {
+    width: 350px !important;
+    margin-bottom: -50px !important;
+    margin-top: -20px !important;
   }
 
   .servicios__grid {
