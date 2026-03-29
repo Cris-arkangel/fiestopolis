@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initScrollAnimations();
   initContactForm();
+  initTestimoniosCarousel();
 });
 
 // ===========================
@@ -216,4 +217,41 @@ function isValidPhone(phone) {
   // Accept various phone formats: digits, spaces, +, -, (, )
   const cleaned = phone.replace(/[\s\-\(\)]/g, '');
   return /^\+?\d{7,15}$/.test(cleaned);
+}
+
+// ===========================
+// Testimonios Carousel
+// ===========================
+let carouselInterval = null;
+let currentSlide = 0;
+
+function initTestimoniosCarousel() {
+  const grupos = document.querySelectorAll('.testimonios__grupo');
+  if (grupos.length === 0) return;
+
+  // Auto-rotate every 7 seconds
+  carouselInterval = setInterval(() => {
+    currentSlide = (currentSlide + 1) % grupos.length;
+    goToSlide(currentSlide);
+  }, 7000);
+}
+
+function goToSlide(index) {
+  const grupos = document.querySelectorAll('.testimonios__grupo');
+  const dots = document.querySelectorAll('.carousel-dot');
+
+  grupos.forEach(g => g.classList.remove('active'));
+  dots.forEach(d => d.style.opacity = '0.3');
+
+  if (grupos[index]) grupos[index].classList.add('active');
+  if (dots[index]) dots[index].style.opacity = '1';
+
+  currentSlide = index;
+
+  // Reset auto-rotation timer
+  if (carouselInterval) clearInterval(carouselInterval);
+  carouselInterval = setInterval(() => {
+    currentSlide = (currentSlide + 1) % grupos.length;
+    goToSlide(currentSlide);
+  }, 7000);
 }
