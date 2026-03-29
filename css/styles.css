@@ -538,15 +538,15 @@ ul {
   position: relative;
 }
 
-.testimonios__grupo {
-  display: none;
+.testimonios__carousel .testimonios__grupo {
+  display: none !important;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 24px;
   animation: fadeIn 0.6s ease;
 }
 
-.testimonios__grupo.active {
-  display: grid;
+.testimonios__carousel .testimonios__grupo.active {
+  display: grid !important;
 }
 
 @keyframes fadeIn {
@@ -1044,6 +1044,10 @@ ul {
   }
 
   .testimonios__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonios__carousel .testimonios__grupo.active {
     grid-template-columns: 1fr;
   }
 
